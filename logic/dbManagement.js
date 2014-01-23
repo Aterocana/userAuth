@@ -23,7 +23,8 @@ exports.connect = function () {
 		if (err)
 			return err;
 		var opt = JSON.parse(data);
-		mongoose.connect('mongodb://'+opt.url+':'+opt.port+'/'+opt.db_name, function(err){
+		//mongoose.connect('mongodb://localhost:27017/Auth', function(err){
+    mongoose.connect('mongodb://'+opt.url+':'+opt.port+'/'+opt.db_name, function(err){  
 			if (err)
 				console.error('Impossibile connettersi al database');
 			else

@@ -21,6 +21,10 @@ function administrator(req, res, next) {
       res.render('home', {titolo: 'TITOLO', msg: 'Utente in sessione non amministratore.'});
     }
   }
+  else{
+    req.session.error = 'Nessun utente in sessione.';
+    res.render('home', {titolo: 'TITOLO', msg: 'Nessun utente in sessione.'});
+  }
 }
 
 //-------------------------------------ROUTES
@@ -57,9 +61,7 @@ module.exports = function (app) {
       
       if (err){
         //utente non trovato
-        res.render('login', {msg: err.toString()});
-        /*res.send(err.toString());
-        return console.error(err);*/        
+        res.render('login', {msg: err.toString()});      
       }
       else if (user){
         req.session.regenerate(function (){
@@ -70,7 +72,6 @@ module.exports = function (app) {
       else {
         //password non valida        
         res.render('login', {msg: err.toString()});
-        //res.send(err.toString());
       }
 
     });
