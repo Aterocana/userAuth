@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Log in</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>    
+    <h1>Log in</h1>
+    <p><%= msg %></p>
+		<form id="formAddUser" name="adduser" method="post" action="/login">
+			<input type="text" placeholder="username" name="username" />			
+			<input type="password" placeholder="password" name="pwd" />
+			<input type="submit" value="Login" />
+		</form>
+    <br />
+    <a href='\'>Torna alla home</a>
+  </body>
+</html>

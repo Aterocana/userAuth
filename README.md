@@ -1,4 +1,4 @@
 userAuth
 ========
 
-A nodejs user authenticator
+A Nodejs User Authenticator Demo

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Signup</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1>Signup</h1>
+    <p> <%= msg %> </p>
+		<form id="formAddUser" name="adduser" method="post" action="/<%= target %>">
+			<input type="text" placeholder="username" name="username" />
+			<input type="text" placeholder="email" name="email" />
+			<input type="password" placeholder="password" name="pwd" />
+			<input type="submit" value="Registrati" />
+		</form>
+    <br />
+    <a href='\'>Torna alla home</a>    
+  </body>
+</html>
