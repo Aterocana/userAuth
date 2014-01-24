@@ -66,7 +66,7 @@ module.exports = function (app) {
       else if (user){
         req.session.regenerate(function (){
           req.session.user = user;
-          res.redirect('restricted');          
+          res.redirect('restricted');
         });
       }
       else {
@@ -78,8 +78,9 @@ module.exports = function (app) {
   	
   });
 
-  app.get('/admin-signup', function (req, res) {
-    res.render('signup', { msg: '', target: 'admin-signup' });
+  app.get('/logout', function (req, res){
+    req.session.destroy();
+    res.redirect('/');
   });
 
   app.post('/admin-signup', function (req, res){
