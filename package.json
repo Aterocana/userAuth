@@ -10,6 +10,5 @@
     "express"     : ">= 3.4.7",
     "ejs"         : "*",
     "mongoose"    : "*"
-  },
-  "engine" : "node 0.10.24"
+  }
 }
